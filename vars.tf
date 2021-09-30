@@ -12,5 +12,5 @@ variable "PATH_TO_PUBLIC_KEY" {
 
 
 variable "AMI_ID" {
-  default = ""
+  default = "ami-5b41123e"
 }
