@@ -10,7 +10,3 @@ variable "PATH_TO_PUBLIC_KEY" {
   default = "~/.ssh/id_rsa.pub"
 }
 
-
-variable "AMI_ID" {
-  default = "ami-5b41123e"
-}
