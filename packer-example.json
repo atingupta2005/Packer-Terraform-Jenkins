@@ -1,12 +1,19 @@
 {
+  "variables": {
+    "region": "us-east-1",
+    "ami_id": "ami-09e67e426f25ce0d7",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu"
+  },
+  
   "builders": [{
     "type": "amazon-ebs",
-    "region": "us-east-1",
-    "source_ami": "ami-09e67e426f25ce0d7",
-    "instance_type": "t2.micro",
-    "ssh_username": "ubuntu",
+    "region": "{{user `region`}}",
+    "source_ami": "{{user `ami_id`}}",
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "{{user `ssh_username`}}",
     "ssh_pty" : true,
-    "ami_name": "packer-example {{timestamp}}"
+    "ami_name": "packer-ami {{timestamp}}"
   }],
   "provisioners": [{
     "type": "shell",
