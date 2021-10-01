@@ -1,3 +1,3 @@
 #!/bin/bash
-yum update
-yum install -y nginx vim nano
+apt -y update
+apt install -y nginx vim nano git
