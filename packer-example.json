@@ -3,7 +3,8 @@
     "region": "us-east-1",
     "ami_id": "ami-09e67e426f25ce0d7",
     "instance_type": "t2.micro",
-    "ssh_username": "ubuntu"
+    "ssh_username": "ubuntu",
+    "my_secret": "{{env `MY_SECRET`}}"
   },
   
   "builders": [{
